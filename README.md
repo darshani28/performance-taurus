@@ -92,8 +92,7 @@ Response assertions for text contain "succeeded" and "Failed = 0"
         not: false
         regexp: false
 ```
-
- Adding JMeter Properties
+Adding JMeter Properties
 JMeter’s default configuration (see jmeter.bat for Windows or jmeter for non-Windows systems scripts) assumes a heap space of 512 megabytes only. This is actually pretty low for this experiment and allocated 4GB RAM space for jmeter in modules section of this script.
 
  ```
@@ -102,9 +101,11 @@ JMeter’s default configuration (see jmeter.bat for Windows or jmeter for non-W
     memory-xmx: 4G  # allow JMeter to use up to 4G of memory
  ```
 ### Clone and run YML test file
+```
 Clone project
-modify url,Authorization and file path that will be uploaded
-## RUN
+```
+Modify url,Authorization and file path location
+### Run
 ```
 bzt uploadFileTest.yml
 ```
