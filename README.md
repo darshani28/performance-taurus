@@ -100,10 +100,10 @@ JMeter’s default configuration (see jmeter.bat for Windows or jmeter for non-W
   jmeter:
     memory-xmx: 4G  # allow JMeter to use up to 4G of memory
  ```
-### Clone and run YML test file
-```
-Clone project
-```
+### Clone and run this project
+
+git clone (https://github.com/jemalft/performance-taurus.git/)
+
 Modify url,Authorization and file path location
 ### Run
 ```
@@ -117,8 +117,8 @@ bzt uploadFileTest.yml --report
 ```
 
 ### Expected Result 
-- Live taurus report.
-- BlazeMeter report will be triggered on new browser session.
-- Test result Artifacts in the project dir.
+* Live taurus report.
+* BlazeMeter report will be triggered on new browser session.
+* Test result Artifacts in the project dir.
 
   
