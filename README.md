@@ -41,8 +41,7 @@ execution:
   
   scenarios:
   File Upload using REST API:
-    #headers:
-     # Authorization: Basic ${__base64Encode(${__P(user-auth)})}
+    
     requests:
     - assert:
       - assume-success: false
