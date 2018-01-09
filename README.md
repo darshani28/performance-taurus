@@ -1,4 +1,4 @@
-# Run Jmeter Performance testing plane using taurus
+# Authomate Performance test using Taurus with Jmeter
 
 leverage taurus's capabilities to adopt an existed open source functional and performance testing tools to automate and use them in a way to build contious integration process using jenkins. Taurus relies on JMeter, Gatling, Locust.io, Grinder and Selenium WebDriver as its underlying tools. Free and open source under Apache 2.0 License.
 for example ,configuration options and reports which JMeter does not offer by default and also,easly to debugging errors,maintain and simple to understand.
@@ -97,7 +97,7 @@ JMeter’s default configuration (see jmeter.bat for Windows or jmeter for non-W
  ```
  modules:
   jmeter:
-    memory-xmx: 4G  # allow JMeter to use up to 4G of memory
+    memory-xmx: 12G  # allow JMeter to use up to 4G of memory
  ```
 ### Clone and run this project
 
