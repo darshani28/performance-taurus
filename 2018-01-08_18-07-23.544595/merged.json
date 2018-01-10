@@ -1,0 +1,61 @@
+{
+ "scenarios": {
+  "File Upload using REST API": {
+   "store-cache": false, 
+   "variables": {
+    "sourceId": "5a4588ffe4b043bb5a947999", 
+    "host": "localhost", 
+    "port": "8080", 
+    "accountId": "5a2ef7a2e4b043bb0659cddf"
+   }, 
+   "store-cookie": false, 
+   "use-dns-cache-mgr": false, 
+   "requests": [
+    {
+     "url": "http://${host}:${port}/zoomdata/api/upload/${sourceId}?accountId=${accountId}", 
+     "follow-redirects": true, 
+     "upload-files": [
+      {
+       "path": "MiscTest.csv", 
+       "mime-type": "text/csv", 
+       "param": "fileData"
+      }
+     ], 
+     "label": "uploading ", 
+     "assert": [
+      {
+       "not": false, 
+       "regexp": false, 
+       "contains": [
+        "\"succeeded\"", 
+        "\"failed\":0"
+       ], 
+       "assume-success": false, 
+       "subject": "body"
+      }
+     ], 
+     "headers": {
+      "Authorization": "Basic ${__base64Encode(${__P(user-auth)})}"
+     }, 
+     "method": "POST"
+    }
+   ]
+  }
+ }, 
+ "execution": [
+  {
+   "ramp-up": "50s", 
+   "hold-for": "1m", 
+   "concurrency": 10, 
+   "scenario": "File Upload using REST API"
+  }
+ ], 
+ "modules": {
+  "jmeter": {
+   "memory-xmx": "4G"
+  }
+ }, 
+ "included-configs": [
+  "config.yml"
+ ]
+}

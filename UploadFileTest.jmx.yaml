@@ -1,14 +1,13 @@
 ---
 execution:
 - concurrency: 10
-  hold-for: 1m
-#  iterations: 1
-  ramp-up: 50s
+  hold-for: 5m  # time boundery to send all the request
+  iterations: 10
+  ramp-up: 50s  #delay before starting next vuser
   scenario: File Upload using REST API
 scenarios:
   File Upload using REST API:
-    #headers:
-     # Authorization: Basic ${__base64Encode(${__P(user-auth)})}
+  
     requests:
     - assert:
       - assume-success: false
@@ -24,7 +23,8 @@ scenarios:
       upload-files:
       - mime-type: text/csv
         param: fileData
-        path: MiscTest.csv
+        path: itbitEUR.csv  # file size 10MB
+        #basic authorization setting
       headers:
         Authorization: Basic ${__base64Encode(${__P(user-auth)})}
       url: http://${host}:${port}/zoomdata/api/upload/${sourceId}?accountId=${accountId}
@@ -40,6 +40,30 @@ scenarios:
 included-configs:  # it must be a list of string values
 - config.yml  # to add local file just set its path
 
+#generate test report of test result stat
+reporting:
+- module: console
+- module: final-stats
+  summary: true  # overall samples count and percent of failures
+  percentiles: true  # display average times and percentiles
+  failed-labels: false  # provides list of sample labels with failures
+  test-duration: true  # provides test duration
+  dump-csv: TaurusResult-10vu/perf_result_csv.csv
+- module: junit-xml
+  data-source: pass-fail
+  criteria:
+  - avg-rt of uploading>428000ms for 10s, stop as failed
+  filename: TaurusResult-10vu/junit-result.xml
+- module: blazemeter
+  report-name: Taurus test report
+  test: Taurus test
+  project: Taurus test project
+
+#specify the location of artifacts
+settings:
+  artifacts-dir: TaurusResult-10vu
+
+#allocate enough RAM to jmeter to avoid Heap space OOM error
 modules:
   jmeter:
-    memory-xmx: 4G  # allow JMeter to use up to 4G of memory
+    memory-xmx: 12G

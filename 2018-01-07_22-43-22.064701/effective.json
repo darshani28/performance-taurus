@@ -1,0 +1,420 @@
+{
+ "settings": {
+  "check-updates": true, 
+  "check-interval": 1, 
+  "verbose": false, 
+  "aggregator": "consolidator", 
+  "default-executor": "jmeter", 
+  "proxy": {}, 
+  "artifacts-dir": "%Y-%m-%d_%H-%M-%S.%f", 
+  "tab-replacement-spaces": 4
+ }, 
+ "reporting": [
+  {
+   "dump-csv": null, 
+   "module": "final-stats", 
+   "summary": true, 
+   "test-duration": true, 
+   "percentiles": true, 
+   "dump-xml": null, 
+   "failed-labels": false
+  }, 
+  {
+   "module": "console"
+  }, 
+  {
+   "dump-csv": null, 
+   "module": "final-stats", 
+   "summary": true, 
+   "failed-labels": true, 
+   "percentiles": true, 
+   "dump-xml": null, 
+   "test-duration": true
+  }
+ ], 
+ "modules": {
+  "appium": {
+   "class": "bzt.modules.services.AppiumLoader"
+  }, 
+  "ab": {
+   "class": "bzt.modules.ab.ApacheBenchmarkExecutor"
+  }, 
+  "proxy2jmx": {
+   "class": "bzt.modules.proxy2jmx.Proxy2JMX"
+  }, 
+  "mocha": {
+   "class": "bzt.modules.javascript.MochaTester"
+  }, 
+  "blazemeter": {
+   "class": "bzt.modules.blazemeter.BlazeMeterUploader"
+  }, 
+  "testng": {
+   "class": "bzt.modules.java.TestNGTester"
+  }, 
+  "cloud": {
+   "class": "bzt.modules.blazemeter.CloudProvisioning", 
+   "default-location": "us-central1-a"
+  }, 
+  "install-checker": {
+   "class": "bzt.modules.services.InstallChecker"
+  }, 
+  "monitoring": {
+   "class": "bzt.modules.monitoring.Monitoring"
+  }, 
+  "chrome-metric-reporter": {
+   "class": "bzt.modules.chrome.MetricReporter"
+  }, 
+  "gatling": {
+   "class": "bzt.modules.gatling.GatlingExecutor", 
+   "properties": {
+    "gatling.data.file.bufferSize": 256
+   }
+  }, 
+  "grinder": {
+   "class": "bzt.modules.grinder.GrinderExecutor", 
+   "properties": {
+    "grinder.useConsole": false
+   }
+  }, 
+  "selenium": {
+   "class": "bzt.modules.selenium.SeleniumExecutor"
+  }, 
+  "tsung": {
+   "class": "bzt.modules.tsung.TsungExecutor"
+  }, 
+  "pytest": {
+   "class": "bzt.modules.python.PyTestExecutor"
+  }, 
+  "capturehar": {
+   "class": "bzt.modules.blazemeter.ServiceStubCaptureHAR"
+  }, 
+  "virtual-display": {
+   "class": "bzt.modules.services.VirtualDisplay"
+  }, 
+  "shellexec": {
+   "class": "bzt.modules.shellexec.ShellExecutor"
+  }, 
+  "screenshoter": {
+   "class": "bzt.modules.blazemeter.ServiceStubScreenshoter"
+  }, 
+  "nunit": {
+   "class": "bzt.modules.csharp.NUnitExecutor"
+  }, 
+  "chrome-profiler": {
+   "class": "bzt.modules.chrome.ChromeProfiler", 
+   "processors": {
+    "trace": {
+     "extractors": [
+      "bzt.modules.chrome.TabNameExtractor", 
+      "bzt.modules.chrome.MemoryMetricsExtractor"
+     ], 
+     "class": "bzt.modules.chrome.TraceProcessor"
+    }
+   }
+  }, 
+  "siege": {
+   "class": "bzt.modules.siege.SiegeExecutor"
+  }, 
+  "rspec": {
+   "class": "bzt.modules.ruby.RSpecTester"
+  }, 
+  "newman": {
+   "class": "bzt.modules.javascript.NewmanExecutor"
+  }, 
+  "final-stats": {
+   "class": "bzt.modules.reporting.FinalStatus"
+  }, 
+  "wdio": {
+   "class": "bzt.modules.javascript.WebdriverIOExecutor"
+  }, 
+  "pbench": {
+   "class": "bzt.modules.pbench.PBenchExecutor"
+  }, 
+  "console": {
+   "screen": "console", 
+   "disable": "auto", 
+   "class": "bzt.modules.console.ConsoleStatusReporter"
+  }, 
+  "android-emulator": {
+   "class": "bzt.modules.services.AndroidEmulatorLoader"
+  }, 
+  "final_stats": {
+   "class": "bzt.modules.reporting.FinalStatus"
+  }, 
+  "functional-consolidator": {
+   "class": "bzt.modules.functional.FunctionalAggregator"
+  }, 
+  "jmeter": {
+   "force-ctg": true, 
+   "memory-xmx": "4G", 
+   "gui": false, 
+   "detect-plugins": true, 
+   "properties": {
+    "username": "admin", 
+    "jmeter.save.saveservice.autoflush": "true", 
+    "jmeter.save.saveservice.connect_time": "true", 
+    "sourceId": "5a4588ffe4b043bb5a947999", 
+    "user-auth": "admin:Z00mda1a!", 
+    "summariser.name": "", 
+    "jmeterengine.force.system.exit": "true", 
+    "password": "********", 
+    "port": "8080", 
+    "base-uri": "http://localhost", 
+    "accountId": "5a2ef7a2e4b043bb0659cddf"
+   }, 
+   "class": "bzt.modules.jmeter.JMeterExecutor", 
+   "system-properties": {}, 
+   "version": "3.3", 
+   "download-link": null, 
+   "plugins": [
+    "jpgc-casutg", 
+    "jpgc-dummy", 
+    "jpgc-ffw", 
+    "jpgc-fifo", 
+    "jpgc-functions", 
+    "jpgc-json", 
+    "jpgc-perfmon", 
+    "jpgc-prmctl", 
+    "jpgc-tst"
+   ], 
+   "xml-jtl-flags": {
+    "responseData": true
+   }, 
+   "path": "/Users/jemal/.bzt/jmeter-taurus/3.3/bin/jmeter.sh", 
+   "shutdown-wait": 5, 
+   "shutdown-port": 4445
+  }, 
+  "apiritif": {
+   "class": "bzt.modules.python.ApiritifNoseExecutor"
+  }, 
+  "local": {
+   "sequential": false, 
+   "class": "bzt.modules.provisioning.Local"
+  }, 
+  "locust": {
+   "class": "bzt.modules.locustio.LocustIOExecutor"
+  }, 
+  "robot": {
+   "class": "bzt.modules.python.RobotExecutor"
+  }, 
+  "junit": {
+   "class": "bzt.modules.java.JUnitTester"
+  }, 
+  "passfail": {
+   "class": "bzt.modules.passfail.PassFailStatus"
+  }, 
+  "nose": {
+   "class": "bzt.modules.python.ApiritifNoseExecutor"
+  }, 
+  "molotov": {
+   "class": "bzt.modules.molotov.MolotovExecutor"
+  }, 
+  "consolidator": {
+   "max-buffer-len": Infinity, 
+   "buffer-multiplier": 2, 
+   "ignore-labels": [
+    "ignore"
+   ], 
+   "min-buffer-len": 2, 
+   "percentiles": [
+    0, 
+    50, 
+    90, 
+    95, 
+    99, 
+    99.9, 
+    100
+   ], 
+   "rtimes-len": 1000, 
+   "buffer-scale-choice": 0.5, 
+   "generalize-labels": false, 
+   "class": "bzt.modules.aggregator.ConsolidatingAggregator"
+  }, 
+  "unpacker": {
+   "class": "bzt.modules.services.Unpacker"
+  }, 
+  "junit-xml": {
+   "class": "bzt.modules.reporting.JUnitXMLReporter"
+  }
+ }, 
+ "provisioning": "local", 
+ "scenarios": {
+  "File Upload using REST API": {
+   "concurrent-pool-size": 4, 
+   "store-cache": false, 
+   "modifications": {}, 
+   "retrieve-resources": true, 
+   "content-encoding": null, 
+   "variables": {
+    "sourceId": "5a4588ffe4b043bb5a947999", 
+    "host": "localhost", 
+    "port": "8080", 
+    "accountId": "5a2ef7a2e4b043bb0659cddf"
+   }, 
+   "retrieve-resources-regex": null, 
+   "headers": {}, 
+   "think-time": null, 
+   "data-sources": [], 
+   "timeout": null, 
+   "random-source-ip": null, 
+   "disable-listeners": true, 
+   "requests": [
+    {
+     "think-time": null, 
+     "body": null, 
+     "follow-redirects": true, 
+     "timeout": null, 
+     "content-encoding": null, 
+     "url": "http://${host}:${port}/zoomdata/api/upload/${sourceId}?accountId=${accountId}", 
+     "jsr223": [], 
+     "assert-jsonpath": [], 
+     "extract-xpath": {}, 
+     "upload-files": [
+      {
+       "path": "/Users/jemal/jemal-performance-project/performance-taurus/MiscTest.csv", 
+       "mime-type": "text/csv", 
+       "param": "fileData"
+      }
+     ], 
+     "label": "uploading ", 
+     "assert": [
+      {
+       "not": false, 
+       "regexp": false, 
+       "contains": [
+        "\"succeeded\"", 
+        "\"failed\":0"
+       ], 
+       "assume-success": false, 
+       "subject": "body"
+      }
+     ], 
+     "headers": {
+      "Authorization": "Basic ${__base64Encode(${__P(user-auth)})}"
+     }, 
+     "assert-xpath": [], 
+     "body-file": null, 
+     "random-source-ip": null, 
+     "keepalive": null, 
+     "extract-regexp": {}, 
+     "method": "POST", 
+     "extract-css-jquery": {}, 
+     "extract-jsonpath": {}
+    }
+   ], 
+   "default-address": null, 
+   "store-cookie": false, 
+   "properties": {}, 
+   "use-dns-cache-mgr": false, 
+   "keepalive": null
+  }
+ }, 
+ "version": "1.10.3", 
+ "cli-aliases": {
+  "gui": {
+   "modules": {
+    "jmeter": {
+     "gui": true
+    }
+   }
+  }, 
+  "locations": {
+   "modules": {
+    "cloud": {
+     "dump-locations": true
+    }
+   }, 
+   "provisioning": "cloud"
+  }, 
+  "sequential": {
+   "modules": {
+    "local": {
+     "sequential": true
+    }
+   }
+  }, 
+  "func": {
+   "modules": {
+    "console": {
+     "disable": true
+    }
+   }, 
+   "settings": {
+    "aggregator": "functional-consolidator"
+   }
+  }, 
+  "report": {
+   "reporting": [
+    "blazemeter"
+   ]
+  }, 
+  "install-tools": {
+   "services": [
+    "install-checker"
+   ]
+  }, 
+  "detach": {
+   "modules": {
+    "cloud": {
+     "detach": true
+    }
+   }
+  }, 
+  "local": {
+   "provisioning": "local"
+  }, 
+  "public": {
+   "modules": {
+    "blazemeter": {
+     "public-report": true
+    }
+   }
+  }, 
+  "cloud": {
+   "provisioning": "cloud"
+  }
+ }, 
+ "install-id": "macos-acbc32975129", 
+ "services": [
+  {
+   "run-at": "local", 
+   "local": [
+    {
+     "metrics": [
+      "cpu", 
+      "mem", 
+      "bytes-sent", 
+      "bytes-recv", 
+      "disk-read", 
+      "disk-write", 
+      "disk-space", 
+      "engine-loop", 
+      "conn-all"
+     ]
+    }
+   ], 
+   "module": "monitoring"
+  }
+ ], 
+ "execution": [
+  {
+   "files": [], 
+   "concurrency": {
+    "local": 10
+   }, 
+   "scenario": "File Upload using REST API", 
+   "ramp-up": "50s", 
+   "start-at": 0, 
+   "distributed": [], 
+   "delay": 0, 
+   "throughput": {
+    "local": null
+   }, 
+   "write-xml-jtl": "error", 
+   "iterations": null, 
+   "executor": "jmeter", 
+   "steps": null, 
+   "hold-for": "1m"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+---
+execution:
+- concurrency: 10
+  hold-for: 1m
+#  iterations: 1
+  ramp-up: 50s
+  scenario: File Upload using REST API
+scenarios:
+  File Upload using REST API:
+    #headers:
+     # Authorization: Basic ${__base64Encode(${__P(user-auth)})}
+    requests:
+    - assert:
+      - assume-success: false
+        contains:
+        - '"succeeded"'
+        - '"failed":0'
+        not: false
+        regexp: false
+        subject: body
+      follow-redirects: true
+      label: 'uploading '
+      method: POST
+      upload-files:
+      - mime-type: text/csv
+        param: fileData
+        path: MiscTest.csv
+      headers:
+        Authorization: Basic ${__base64Encode(${__P(user-auth)})}
+      url: http://${host}:${port}/zoomdata/api/upload/${sourceId}?accountId=${accountId}
+    store-cache: false
+    store-cookie: false
+    use-dns-cache-mgr: false
+    variables:
+      accountId: 5a2ef7a2e4b043bb0659cddf
+      host: localhost
+      port: '8080'
+      sourceId: 5a4588ffe4b043bb5a947999
+
+included-configs:  # it must be a list of string values
+- config.yml  # to add local file just set its path
+
+modules:
+  jmeter:
+    memory-xmx: 4G  # allow JMeter to use up to 4G of memory

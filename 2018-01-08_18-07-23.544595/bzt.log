@@ -1,0 +1,289 @@
+[2018-01-08 18:07:23,489 INFO root] Taurus CLI Tool v1.10.3
+[2018-01-08 18:07:23,489 DEBUG root] Command-line options: {'verbose': None, 'no_system_configs': None, 'quiet': None, 'log': '/var/folders/cc/2n2rvyqj06jbjh73x2cnbf3h0000gp/T/bzt_2QDLYe.log', 'option': None, 'aliases': ['report']}
+[2018-01-08 18:07:23,490 DEBUG root] Python: CPython 2.7.10
+[2018-01-08 18:07:23,490 DEBUG root] OS: ('Darwin', 'Zoomdatas-MacBook-Pro.local', '17.2.0', 'Darwin Kernel Version 17.2.0: Fri Sep 29 18:27:05 PDT 2017; root:xnu-4570.20.62~3/RELEASE_X86_64', 'x86_64', 'i386')
+[2018-01-08 18:07:23,490 INFO root] Starting with configs: ['UploadFileTest.jmx.yaml']
+[2018-01-08 18:07:23,490 DEBUG root] Using personal config: /Users/jemal/.bzt-rc
+[2018-01-08 18:07:23,490 INFO Engine] Configuring...
+[2018-01-08 18:07:23,490 DEBUG Engine] No machine configs dir: /usr/local/Cellar/bzt/1.10.3/libexec/etc/bzt.d
+[2018-01-08 18:07:23,490 DEBUG Engine.Configuration] Configs: ['/usr/local/Cellar/bzt/1.10.3/libexec/lib/python2.7/site-packages/bzt/resources/base-config.yml']
+[2018-01-08 18:07:23,490 DEBUG Engine.Configuration] Reading /usr/local/Cellar/bzt/1.10.3/libexec/lib/python2.7/site-packages/bzt/resources/base-config.yml as YAML
+[2018-01-08 18:07:23,514 DEBUG Engine.Configuration] Configs: ['/Users/jemal/.bzt-rc', 'UploadFileTest.jmx.yaml']
+[2018-01-08 18:07:23,515 DEBUG Engine.Configuration] Reading /Users/jemal/.bzt-rc as YAML
+[2018-01-08 18:07:23,518 DEBUG Engine.Configuration] Reading UploadFileTest.jmx.yaml as YAML
+[2018-01-08 18:07:23,524 DEBUG Engine.Configuration] Configs: ['/Users/jemal/.bzt-rc', 'UploadFileTest.jmx.yaml']
+[2018-01-08 18:07:23,524 DEBUG Engine.Configuration] Reading /Users/jemal/.bzt-rc as YAML
+[2018-01-08 18:07:23,527 DEBUG Engine.Configuration] Reading UploadFileTest.jmx.yaml as YAML
+[2018-01-08 18:07:23,534 DEBUG Engine.Configuration] Configs: ['/Users/jemal/jemal-performance-project/performance-taurus/config.yml']
+[2018-01-08 18:07:23,535 DEBUG Engine.Configuration] Reading /Users/jemal/jemal-performance-project/performance-taurus/config.yml as YAML
+[2018-01-08 18:07:23,544 DEBUG Engine] Requesting updates info: http://gettaurus.org/updates/?version=1.10.3&installID=macos-acbc32975129
+[2018-01-08 18:07:23,547 INFO Engine] Artifacts dir: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595
+[2018-01-08 18:07:23,548 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective
+[2018-01-08 18:07:23,550 DEBUG Engine.Configuration] Dumping YAML config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.yml
+[2018-01-08 18:07:23,573 DEBUG Engine.Configuration] Dumping JSON config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.json
+[2018-01-08 18:07:23,574 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/merged.yml
+[2018-01-08 18:07:23,575 DEBUG Engine.Configuration] Dumping YAML config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/merged.yml
+[2018-01-08 18:07:23,578 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/merged.json
+[2018-01-08 18:07:23,579 DEBUG Engine.Configuration] Dumping JSON config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/merged.json
+[2018-01-08 18:07:23,579 DEBUG Engine] Add existing artifact (move=False): UploadFileTest.jmx.yaml
+[2018-01-08 18:07:23,579 DEBUG Engine] Copying UploadFileTest.jmx.yaml to /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/UploadFileTest.jmx.yaml
+[2018-01-08 18:07:23,579 DEBUG root] Closing log handler: /var/folders/cc/2n2rvyqj06jbjh73x2cnbf3h0000gp/T/bzt_2QDLYe.log
+[2018-01-08 18:07:23,580 DEBUG root] Switched writing logs to /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/bzt.log
+[2018-01-08 18:07:23,580 INFO Engine] Preparing...
+[2018-01-08 18:07:23,580 DEBUG Engine] Module config: consolidator defaultdict(None, {'class': 'bzt.modules.aggregator.ConsolidatingAggregator'})
+[2018-01-08 18:07:23,580 DEBUG root] Importing module: bzt.modules.aggregator
+[2018-01-08 18:07:23,606 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/usr/local/Cellar/bzt/1.10.3/libexec/lib/python2.7/site-packages/bzt/modules/aggregator.pyc'>
+[2018-01-08 18:07:23,606 DEBUG Engine.consolidator] Exception in dehumanize_time(inf)
+[2018-01-08 18:07:23,606 DEBUG Engine.consolidator] Buffer scaling setup: percentile 95.0 from [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0] selected
+[2018-01-08 18:07:23,606 DEBUG Engine] Module config: monitoring defaultdict(None, {'class': 'bzt.modules.monitoring.Monitoring'})
+[2018-01-08 18:07:23,606 DEBUG root] Importing module: bzt.modules.monitoring
+[2018-01-08 18:07:23,608 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/usr/local/Cellar/bzt/1.10.3/libexec/lib/python2.7/site-packages/bzt/modules/monitoring.pyc'>
+[2018-01-08 18:07:23,608 DEBUG Engine] Module config: local defaultdict(None, {'class': 'bzt.modules.provisioning.Local'})
+[2018-01-08 18:07:23,608 DEBUG root] Importing module: bzt.modules.provisioning
+[2018-01-08 18:07:23,608 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from '/usr/local/Cellar/bzt/1.10.3/libexec/lib/python2.7/site-packages/bzt/modules/provisioning.pyc'>
+[2018-01-08 18:07:23,608 DEBUG Engine] Module config: jmeter defaultdict(None, {'xml-jtl-flags': defaultdict(None, {'responseData': True}), 'properties': defaultdict(None, {'username': 'admin', 'jmeter.save.saveservice.autoflush': 'true', 'jmeter.save.saveservice.connect_time': 'true', 'sourceId': '5a4588ffe4b043bb5a947999', 'user-auth': 'admin:Z00mda1a!', 'summariser.name': '', 'jmeterengine.force.system.exit': 'true', 'password': '********', 'port': '8080', 'base-uri': 'http://localhost', 'accountId': '5a2ef7a2e4b043bb0659cddf'}), 'memory-xmx': '4G', 'class': 'bzt.modules.jmeter.JMeterExecutor', 'plugins': ['jpgc-casutg', 'jpgc-dummy', 'jpgc-ffw', 'jpgc-fifo', 'jpgc-functions', 'jpgc-json', 'jpgc-perfmon', 'jpgc-prmctl', 'jpgc-tst']})
+[2018-01-08 18:07:23,608 DEBUG root] Importing module: bzt.modules.jmeter
+[2018-01-08 18:07:23,618 DEBUG root] Loading class: 'JMeterExecutor' from <module 'bzt.modules.jmeter' from '/usr/local/Cellar/bzt/1.10.3/libexec/lib/python2.7/site-packages/bzt/modules/jmeter.pyc'>
+[2018-01-08 18:07:23,618 DEBUG Engine.local] Preparing executor: jmeter/4408111888
+[2018-01-08 18:07:23,618 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/jmeter.log
+[2018-01-08 18:07:23,618 DEBUG Engine.jmeter] Checking if port 4445 is free
+[2018-01-08 18:07:23,692 DEBUG Engine.jmeter] Port 4445 is free
+[2018-01-08 18:07:23,692 DEBUG Engine.jmeter] Using port 4445 for management
+[2018-01-08 18:07:23,692 DEBUG Engine.jmeter.JavaVM] Trying JavaVM: ['java', '-version']
+[2018-01-08 18:07:23,821 DEBUG Engine.jmeter.JavaVM] JavaVM output: java version "1.8.0_121"
+Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+
+[2018-01-08 18:07:23,821 DEBUG Engine.jmeter.TclLibrary] We don't need to check tcl library on this platform
+[2018-01-08 18:07:23,822 DEBUG Engine.jmeter.JMeter] Trying jmeter: /Users/jemal/.bzt/jmeter-taurus/3.3/bin/jmeter.sh
+[2018-01-08 18:07:23,822 DEBUG bzt.utils] Executing shell: ['/Users/jemal/.bzt/jmeter-taurus/3.3/bin/jmeter.sh', '-j', '/var/folders/cc/2n2rvyqj06jbjh73x2cnbf3h0000gp/T/jmeterov8uXWlog', '--version'] at .
+[2018-01-08 18:07:24,093 DEBUG Engine] Taurus updates info: {"latest":"1.10.3","needsUpgrade":false}
+[2018-01-08 18:07:24,094 DEBUG Engine] Installation is up-to-date
+[2018-01-08 18:07:34,812 DEBUG Engine.jmeter.JMeter] JMeter check:     _    ____   _    ____ _   _ _____       _ __  __ _____ _____ _____ ____     
+   / \  |  _ \ / \  / ___| | | | ____|     | |  \/  | ____|_   _| ____|  _ \   
+  / _ \ | |_) / _ \| |   | |_| |  _|    _  | | |\/| |  _|   | | |  _| | |_) | 
+ / ___ \|  __/ ___ \ |___|  _  | |___  | |_| | |  | | |___  | | | |___|  _ <  
+/_/   \_\_| /_/   \_\____|_| |_|_____|  \___/|_|  |_|_____| |_| |_____|_| \_\ 3.3 r1808647  
+
+Copyright (c) 1999-2017 The Apache Software Foundation
+
+ / None
+[2018-01-08 18:07:34,812 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/requests.jmx
+[2018-01-08 18:07:34,820 DEBUG JMeterScenarioBuilder] Saving JMX to: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/requests.jmx
+[2018-01-08 18:07:34,821 DEBUG bzt.utils] Executing shell: ['/Users/jemal/.bzt/jmeter-taurus/3.3/bin/PluginsManagerCMD.sh', 'install-for-jmx', '/Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/requests.jmx'] at .
+[2018-01-08 18:07:57,083 DEBUG Engine.jmeter.JMeter] Try to detect plugins for /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/requests.jmx
+18:07:51.246 [main] INFO  org.jmeterplugins.repository.PluginManager - Plugins Status: [jpgc-functions=2.0, jpgc-casutg=2.5, jpgc-dummy=0.2, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-json=2.6, jpgc-prmctl=0.3, jpgc-perfmon=2.1, jpgc-plugins-manager=0.16, jpgc-tst=2.1, websocket-sampler=1.0.2-SNAPSHOT, jmeter-core=3.3, jmeter-ftp=3.3, jmeter-http=3.3, jmeter-jdbc=3.3, jmeter-jms=3.3, jmeter-junit=3.3, jmeter-java=3.3, jmeter-ldap=3.3, jmeter-mail=3.3, jmeter-mongodb=3.3, jmeter-native=3.3, jmeter-tcp=3.3, jmeter-components=3.3]
+2018-01-08 18:07:51,246 INFO o.j.r.PluginManager: Plugins Status: [jpgc-functions=2.0, jpgc-casutg=2.5, jpgc-dummy=0.2, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-json=2.6, jpgc-prmctl=0.3, jpgc-perfmon=2.1, jpgc-plugins-manager=0.16, jpgc-tst=2.1, websocket-sampler=1.0.2-SNAPSHOT, jmeter-core=3.3, jmeter-ftp=3.3, jmeter-http=3.3, jmeter-jdbc=3.3, jmeter-jms=3.3, jmeter-junit=3.3, jmeter-java=3.3, jmeter-ldap=3.3, jmeter-mail=3.3, jmeter-mongodb=3.3, jmeter-native=3.3, jmeter-tcp=3.3, jmeter-components=3.3]
+18:07:51.555 [main] INFO  org.apache.jmeter.save.SaveService - Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-01-08 18:07:51,555 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+18:07:51.565 [main] INFO  org.apache.jmeter.save.SaveService - Using SaveService properties file encoding UTF-8
+2018-01-08 18:07:51,565 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+18:07:51.569 [main] INFO  org.apache.jmeter.save.SaveService - Using SaveService properties version 3.2
+2018-01-08 18:07:51,569 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+18:07:51.667 [main] INFO  org.jmeterplugins.repository.PluginManager - Restarting JMeter...
+2018-01-08 18:07:51,667 INFO o.j.r.PluginManager: Restarting JMeter...
+18:07:51.668 [Thread-1] INFO  org.jmeterplugins.repository.PluginManager - Starting JMeter Plugins modifications
+2018-01-08 18:07:51,668 INFO o.j.r.PluginManager: Starting JMeter Plugins modifications
+
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console. Set system property 'org.apache.logging.log4j.simplelog.StatusLogger.level' to TRACE to show Log4j2 internal initialization logging.
+
+[2018-01-08 18:07:57,083 DEBUG Engine.jmeter] Load: LoadSpec(concurrency=10, throughput=None, ramp_up=50.0, hold=60.0, iterations=0, duration=110.0, steps=None)
+[2018-01-08 18:07:57,086 DEBUG Engine.jmeter.LoadSettingsProcessor.ThreadGroupHandler] Converting ThreadGroup (File Upload using REST API) to ConcurrencyThreadGroup and apply load parameters
+[2018-01-08 18:07:57,086 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/kpi.jtl
+[2018-01-08 18:07:57,086 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/error.jtl
+[2018-01-08 18:07:57,087 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/modified_requests.jmx
+[2018-01-08 18:07:57,087 DEBUG JMX] Saving JMX to: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/modified_requests.jmx
+[2018-01-08 18:07:57,088 DEBUG Engine.jmeter] Additional properties: defaultdict(None, {'username': 'admin', 'jmeter.save.saveservice.autoflush': 'true', 'jmeter.save.saveservice.connect_time': 'true', 'sourceId': '5a4588ffe4b043bb5a947999', 'user-auth': 'admin:Z00mda1a!', 'sampleresult.default.encoding': 'UTF-8', 'summariser.name': '', 'jmeterengine.force.system.exit': 'true', 'user.classpath': '/Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595:/Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595', 'jmeter.save.saveservice.timestamp_format': 'ms', 'jmeterengine.nongui.maxport': 4445, 'password': 'Z00mda1a!', 'jmeterengine.nongui.port': 4445, 'port': '8080', 'base-uri': 'http://localhost', 'accountId': '5a2ef7a2e4b043bb0659cddf'})
+[2018-01-08 18:07:57,088 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/jmeter-bzt.properties
+[2018-01-08 18:07:57,088 DEBUG Engine.jmeter] Setting JVM heap size to 4G
+[2018-01-08 18:07:57,088 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/jmeter.out
+[2018-01-08 18:07:57,088 DEBUG Engine] New artifact filename: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/jmeter.err
+[2018-01-08 18:07:57,089 DEBUG Engine] Module config: final-stats defaultdict(None, {'class': 'bzt.modules.reporting.FinalStatus'})
+[2018-01-08 18:07:57,089 DEBUG root] Importing module: bzt.modules.reporting
+[2018-01-08 18:07:57,151 DEBUG easyprocess] version=0.2.3
+[2018-01-08 18:07:57,155 DEBUG pyvirtualdisplay] version=0.2.1
+[2018-01-08 18:07:57,156 DEBUG root] Loading class: 'FinalStatus' from <module 'bzt.modules.reporting' from '/usr/local/Cellar/bzt/1.10.3/libexec/lib/python2.7/site-packages/bzt/modules/reporting.pyc'>
+[2018-01-08 18:07:57,156 DEBUG Engine] Module config: console defaultdict(None, {'class': 'bzt.modules.console.ConsoleStatusReporter'})
+[2018-01-08 18:07:57,156 DEBUG root] Importing module: bzt.modules.console
+[2018-01-08 18:07:57,156 DEBUG root] Loading class: 'ConsoleStatusReporter' from <module 'bzt.modules.console' from '/usr/local/Cellar/bzt/1.10.3/libexec/lib/python2.7/site-packages/bzt/modules/console.pyc'>
+[2018-01-08 18:07:57,156 DEBUG Engine] Module config: blazemeter defaultdict(None, {'class': 'bzt.modules.blazemeter.BlazeMeterUploader'})
+[2018-01-08 18:07:57,156 DEBUG root] Importing module: bzt.modules.blazemeter
+[2018-01-08 18:07:57,157 DEBUG root] Loading class: 'BlazeMeterUploader' from <module 'bzt.modules.blazemeter' from '/usr/local/Cellar/bzt/1.10.3/libexec/lib/python2.7/site-packages/bzt/modules/blazemeter.pyc'>
+[2018-01-08 18:07:57,162 WARNING Engine.blazemeter] No BlazeMeter API key provided, will upload anonymously
+[2018-01-08 18:07:57,162 DEBUG User] Request: GET https://a.blazemeter.com/api/v4/web/version None
+[2018-01-08 18:07:57,178 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): a.blazemeter.com
+[2018-01-08 18:07:57,308 DEBUG urllib3.connectionpool] https://a.blazemeter.com:443 "GET /api/v4/web/version HTTP/1.1" 200 194
+[2018-01-08 18:07:57,312 DEBUG User] Response [200]: {
+    "api_version": 4,
+    "error": null,
+    "result": "blazemeter-backend-package 6206 release/2017-12-19_85 B6206  Sun Jan 7 17:33:05 2018 +0200 6ffc5fe72b986c09eec1dd740e327536442253fe\n"
+}
+[2018-01-08 18:07:57,315 DEBUG Engine.Configuration] Dumping YAML config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.yml
+[2018-01-08 18:07:57,346 DEBUG Engine.Configuration] Dumping JSON config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.json
+[2018-01-08 18:07:57,347 INFO Engine] Starting...
+[2018-01-08 18:07:57,348 DEBUG Engine] Startup <bzt.modules.monitoring.Monitoring object at 0x106ac1910>
+[2018-01-08 18:07:57,348 DEBUG Engine] Startup <bzt.modules.aggregator.ConsolidatingAggregator object at 0x106a78dd0>
+[2018-01-08 18:07:57,348 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x106aa2390>
+[2018-01-08 18:07:57,348 DEBUG Engine] Startup <bzt.modules.console.ConsoleStatusReporter object at 0x107ffcb90>
+[2018-01-08 18:07:57,348 INFO Engine.console] Waiting for results...
+[2018-01-08 18:07:57,348 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x107ffccd0>
+[2018-01-08 18:07:57,348 DEBUG Engine] Startup <bzt.modules.blazemeter.BlazeMeterUploader object at 0x107ffcc50>
+[2018-01-08 18:07:57,348 INFO Engine.blazemeter] Initiating data feeding...
+[2018-01-08 18:07:57,348 DEBUG User] Request: POST https://a.blazemeter.com/api/v4/sessions None
+[2018-01-08 18:07:57,350 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): a.blazemeter.com
+[2018-01-08 18:07:57,498 DEBUG urllib3.connectionpool] https://a.blazemeter.com:443 "POST /api/v4/sessions HTTP/1.1" 201 2124
+[2018-01-08 18:07:57,501 DEBUG User] Response [201]: {
+    "api_version": 4,
+    "error": null,
+    "result": {
+        "session": {
+            "id": "r-ext-5a53f9e9e41f5",
+            "name": "external",
+            "userId": 386483,
+            "publicToken": "wqsHBFc0ZeuMaQRnDtFUAztcU0J27DCW4UguGIhjaVqGc
+[2018-01-08 18:07:57,502 INFO Engine.blazemeter] Started data feeding: https://a.blazemeter.com/app/?public-token=wqsHBFc0ZeuMaQRnDtFUAztcU0J27DCW4UguGIhjaVqGcEokB2#reports/r-ext-5a53f9e9e41f5/summary
+[2018-01-08 18:07:57,674 DEBUG Engine] Startup <bzt.modules.provisioning.Local object at 0x106a78f10>
+[2018-01-08 18:07:57,675 DEBUG Engine.local] Delay setup for jmeter/File Upload using REST API: 0(start-at) + 0(delay) = 0
+[2018-01-08 18:07:57,678 DEBUG Engine.Configuration] Dumping YAML config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.yml
+[2018-01-08 18:07:57,708 DEBUG Engine.Configuration] Dumping JSON config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.json
+[2018-01-08 18:07:57,709 DEBUG root] Leveling down log file verbosity, use -v option to have DEBUG messages enabled
+[2018-01-08 18:07:57,709 DEBUG root] Leveled up log file verbosity
+[2018-01-08 18:07:57,709 DEBUG Engine.jmeter] Executing shell from /Users/jemal/jemal-performance-project/performance-taurus: ['/Users/jemal/.bzt/jmeter-taurus/3.3/bin/jmeter.sh', '-n', '-t', '/Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/modified_requests.jmx', '-j', '/Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/jmeter.log', '-q', '/Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/jmeter-bzt.properties']
+[2018-01-08 18:07:57,709 DEBUG bzt.utils] Executing shell: ['/Users/jemal/.bzt/jmeter-taurus/3.3/bin/jmeter.sh', '-n', '-t', '/Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/modified_requests.jmx', '-j', '/Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/jmeter.log', '-q', '/Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/jmeter-bzt.properties'] at /Users/jemal/jemal-performance-project/performance-taurus
+[2018-01-08 18:07:57,713 DEBUG root] Leveling down log file verbosity, use -v option to have DEBUG messages enabled
+[2018-01-08 18:07:57,927 INFO Engine.console] Waiting for finish...
+[2018-01-08 18:08:14,747 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 3s
+[2018-01-08 18:08:22,762 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 2s
+[2018-01-08 18:08:35,788 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 3s
+[2018-01-08 18:08:52,811 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 4s
+[2018-01-08 18:09:05,829 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 5s
+[2018-01-08 18:09:15,835 INFO Engine.jmeter.JTLReader] Changed data analysis delay to 6s
+[2018-01-08 18:10:03,165 WARNING Engine] Please wait for graceful shutdown...
+[2018-01-08 18:10:03,180 DEBUG root] Leveled up log file verbosity
+[2018-01-08 18:10:03,180 INFO Engine] Shutting down...
+[2018-01-08 18:10:03,195 DEBUG Engine.local] Shutdown jmeter/File Upload using REST API
+[2018-01-08 18:10:03,195 DEBUG Engine.console] Restoring logging streams, [<logging.StreamHandler object at 0x106381d50>]/{<logging.StreamHandler object at 0x106381d50>: <open file '<stdout>', mode 'w' at 0x105659150>}
+[2018-01-08 18:10:03,200 DEBUG Engine.Configuration] Dumping YAML config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.yml
+[2018-01-08 18:10:03,274 DEBUG Engine.Configuration] Dumping JSON config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.json
+[2018-01-08 18:10:03,276 INFO Engine] Post-processing...
+[2018-01-08 18:10:03,276 DEBUG Engine.local] Post-process jmeter/File Upload using REST API
+[2018-01-08 18:10:03,276 DEBUG Engine] Add existing artifact (move=True): /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/modified_requests.jmx
+[2018-01-08 18:10:03,277 DEBUG Engine] No need to copy /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/modified_requests.jmx
+[2018-01-08 18:10:03,277 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Reading JTL: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/kpi.jtl
+[2018-01-08 18:10:03,277 DEBUG Engine.jmeter.JTLReader.IncrementalCSVReader] Read lines: 0 / 0 bytes (at speed 1048576)
+[2018-01-08 18:10:03,277 DEBUG Engine.jmeter.JTLReader] Buffer len: 6
+[2018-01-08 18:10:03,277 DEBUG Engine.jmeter.JTLReader] Aggregating: 1515452994
+[2018-01-08 18:10:03,284 DEBUG Engine.jmeter.JTLReader] Aggregating: 1515452995
+[2018-01-08 18:10:03,291 DEBUG Engine.jmeter.JTLReader] Aggregating: 1515452996
+[2018-01-08 18:10:03,298 DEBUG Engine.jmeter.JTLReader] Aggregating: 1515452997
+[2018-01-08 18:10:03,304 DEBUG Engine.jmeter.JTLReader] Aggregating: 1515452998
+[2018-01-08 18:10:03,312 DEBUG Engine.jmeter.JTLReader] Aggregating: 1515452999
+[2018-01-08 18:10:03,320 DEBUG Engine.consolidator] Consolidator buffer[8]: [1515452992, 1515452993, 1515452994, 1515452995, 1515452996, 1515452997, 1515452998, 1515452999]
+[2018-01-08 18:10:03,321 DEBUG Engine.consolidator] Merging into 1515452992
+[2018-01-08 18:10:03,321 DEBUG Engine.consolidator] Merging 1515452992
+[2018-01-08 18:10:03,338 DEBUG Engine.consolidator] Processed datapoint: 1515452992/None
+[2018-01-08 18:10:03,339 DEBUG Engine.consolidator] Merging into 1515452993
+[2018-01-08 18:10:03,339 DEBUG Engine.consolidator] Merging 1515452993
+[2018-01-08 18:10:03,352 DEBUG Engine.consolidator] Processed datapoint: 1515452993/None
+[2018-01-08 18:10:03,352 DEBUG Engine.consolidator] Merging into 1515452994
+[2018-01-08 18:10:03,352 DEBUG Engine.consolidator] Merging 1515452994
+[2018-01-08 18:10:03,368 DEBUG Engine.consolidator] Processed datapoint: 1515452994/None
+[2018-01-08 18:10:03,368 DEBUG Engine.consolidator] Merging into 1515452995
+[2018-01-08 18:10:03,369 DEBUG Engine.consolidator] Merging 1515452995
+[2018-01-08 18:10:03,382 DEBUG Engine.consolidator] Processed datapoint: 1515452995/None
+[2018-01-08 18:10:03,382 DEBUG Engine.consolidator] Merging into 1515452996
+[2018-01-08 18:10:03,382 DEBUG Engine.consolidator] Merging 1515452996
+[2018-01-08 18:10:03,399 DEBUG Engine.consolidator] Processed datapoint: 1515452996/None
+[2018-01-08 18:10:03,399 DEBUG Engine.consolidator] Merging into 1515452997
+[2018-01-08 18:10:03,399 DEBUG Engine.consolidator] Merging 1515452997
+[2018-01-08 18:10:03,413 DEBUG Engine.consolidator] Processed datapoint: 1515452997/None
+[2018-01-08 18:10:03,413 DEBUG Engine.consolidator] Merging into 1515452998
+[2018-01-08 18:10:03,413 DEBUG Engine.consolidator] Merging 1515452998
+[2018-01-08 18:10:03,430 DEBUG Engine.consolidator] Processed datapoint: 1515452998/None
+[2018-01-08 18:10:03,430 DEBUG Engine.consolidator] Merging into 1515452999
+[2018-01-08 18:10:03,431 DEBUG Engine.consolidator] Merging 1515452999
+[2018-01-08 18:10:03,445 DEBUG Engine.consolidator] Processed datapoint: 1515452999/None
+[2018-01-08 18:10:03,445 INFO Engine.final-stats] Test duration: 0:02:06
+[2018-01-08 18:10:03,446 INFO Engine.final-stats] Samples count: 467, 0.00% failures
+[2018-01-08 18:10:03,446 INFO Engine.final-stats] Average times: total 1.861, latency 1.849, connect 0.000
+[2018-01-08 18:10:03,446 INFO Engine.final-stats] Percentile 0.0%: 0.330
+[2018-01-08 18:10:03,446 INFO Engine.final-stats] Percentile 50.0%: 1.835
+[2018-01-08 18:10:03,447 INFO Engine.final-stats] Percentile 90.0%: 3.028
+[2018-01-08 18:10:03,447 INFO Engine.final-stats] Percentile 95.0%: 3.190
+[2018-01-08 18:10:03,447 INFO Engine.final-stats] Percentile 99.0%: 3.582
+[2018-01-08 18:10:03,447 INFO Engine.final-stats] Percentile 99.9%: 3.821
+[2018-01-08 18:10:03,448 INFO Engine.final-stats] Percentile 100.0%: 3.821
+[2018-01-08 18:10:03,448 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2018-01-08 18:10:03,448 INFO Engine.final-stats] Test duration: 0:02:06
+[2018-01-08 18:10:03,448 INFO Engine.final-stats] Samples count: 467, 0.00% failures
+[2018-01-08 18:10:03,449 INFO Engine.final-stats] Average times: total 1.861, latency 1.849, connect 0.000
+[2018-01-08 18:10:03,449 INFO Engine.final-stats] Percentile 0.0%: 0.330
+[2018-01-08 18:10:03,449 INFO Engine.final-stats] Percentile 50.0%: 1.835
+[2018-01-08 18:10:03,450 INFO Engine.final-stats] Percentile 90.0%: 3.028
+[2018-01-08 18:10:03,450 INFO Engine.final-stats] Percentile 95.0%: 3.190
+[2018-01-08 18:10:03,451 INFO Engine.final-stats] Percentile 99.0%: 3.582
+[2018-01-08 18:10:03,451 INFO Engine.final-stats] Percentile 99.9%: 3.821
+[2018-01-08 18:10:03,451 INFO Engine.final-stats] Percentile 100.0%: 3.821
+[2018-01-08 18:10:03,452 DEBUG Engine.blazemeter] KPI bulk buffer len in post-proc: 10
+[2018-01-08 18:10:03,452 INFO Engine.blazemeter] Sending remaining KPI data to server...
+[2018-01-08 18:10:03,458 DEBUG User] Request: POST https://data.blazemeter.com/submit.php?session_id=r-ext-5a53f9e9e41f5&signature=edb7fc20f08c1773286195389a9c01a8&test_id=5888922&user_id=386483&pq=0&target=labels_bulk&update=1 {
+ "sourceID": 4429171792, 
+ "labels": [
+  {
+   "percentileHistogramBytes": [], 
+   "errors": [], 
+   "name": "ALL", 
+   "interval": 1, 
+   "otherErrorsCount": 0, 
+   "n": 467, 
+   "percentileHistogramLatency": [], 
+   "intervals": [
+    {
+     "by": {
+   
+[2018-01-08 18:10:03,462 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): data.blazemeter.com
+[2018-01-08 18:10:03,668 DEBUG urllib3.connectionpool] https://data.blazemeter.com:443 "POST /submit.php?session_id=r-ext-5a53f9e9e41f5&signature=edb7fc20f08c1773286195389a9c01a8&test_id=5888922&user_id=386483&pq=0&target=labels_bulk&update=1 HTTP/1.1" 200 140
+[2018-01-08 18:10:03,673 DEBUG User] Response [200]: {"api_version":2,"error":null,"result":{"session":{"_id":"r-ext-5a53f9e9e41f5","name":"external","statusCode":100,"status":"INITIALIZING"}}}
+[2018-01-08 18:10:03,736 DEBUG User] Request: POST https://a.blazemeter.com/api/v4/image/r-ext-5a53f9e9e41f5/files?signature=edb7fc20f08c1773286195389a9c01a8 --===============4312169515198846975==
+Content-Disposition: file; name="file"; filename="r-ext-5a53f9e9e41f5-0-c.monitoring.json"
+Content-Type: application/json
+
+{
+ "kpis": {
+  "Connections": "Connections", 
+  "CPU": "CPU", 
+  "Network I/O": "Network I
+[2018-01-08 18:10:03,740 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): a.blazemeter.com
+[2018-01-08 18:10:04,098 DEBUG urllib3.connectionpool] https://a.blazemeter.com:443 "POST /api/v4/image/r-ext-5a53f9e9e41f5/files?signature=edb7fc20f08c1773286195389a9c01a8 HTTP/1.1" 200 116
+[2018-01-08 18:10:04,103 DEBUG User] Response [200]: {
+    "api_version": 4,
+    "error": null,
+    "result": [
+        "r-ext-5a53f9e9e41f5-0-c.monitoring.json"
+    ]
+}
+[2018-01-08 18:10:04,104 DEBUG Engine.blazemeter] Set last check time to: 1515452877.16
+[2018-01-08 18:10:04,104 INFO Engine.blazemeter] Ending data feeding...
+[2018-01-08 18:10:04,104 DEBUG User] Request: POST https://a.blazemeter.com/api/v4/sessions/r-ext-5a53f9e9e41f5/terminate-external {
+ "sessionId": "r-ext-5a53f9e9e41f5", 
+ "testId": 5888922, 
+ "signature": "edb7fc20f08c1773286195389a9c01a8"
+}
+[2018-01-08 18:10:04,108 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): a.blazemeter.com
+[2018-01-08 18:10:04,618 DEBUG urllib3.connectionpool] https://a.blazemeter.com:443 "POST /api/v4/sessions/r-ext-5a53f9e9e41f5/terminate-external HTTP/1.1" 200 1635
+[2018-01-08 18:10:04,625 DEBUG User] Response [200]: {
+    "api_version": 4,
+    "error": null,
+    "result": {
+        "success": true,
+        "session": {
+            "id": "r-ext-5a53f9e9e41f5",
+            "name": "external",
+            "userId": 386483,
+            "publicToken": "wqsHBFc0ZeuMaQRnDtFU
+[2018-01-08 18:10:04,625 INFO Engine.blazemeter] Online report link: https://a.blazemeter.com/app/?public-token=wqsHBFc0ZeuMaQRnDtFUAztcU0J27DCW4UguGIhjaVqGcEokB2#reports/r-ext-5a53f9e9e41f5/summary
+[2018-01-08 18:10:04,630 DEBUG Engine.Configuration] Dumping YAML config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.yml
+[2018-01-08 18:10:04,704 DEBUG Engine.Configuration] Dumping JSON config into /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/effective.json
+[2018-01-08 18:10:04,707 INFO root] Artifacts dir: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595
+[2018-01-08 18:10:04,707 INFO root] Done performing with code: 0
+[2018-01-08 18:10:04,707 DEBUG root] Closing log handler: /Users/jemal/jemal-performance-project/performance-taurus/2018-01-08_18-07-23.544595/bzt.log

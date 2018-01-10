@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jmeterTestPlan>
+  <hashTree>
+    <TestPlan enabled="true" guiclass="TestPlanGui" testclass="TestPlan" testname="BZT Generated Test Plan">
+      <elementProp elementType="Arguments" guiclass="ArgumentsPanel" name="TestPlan.user_defined_variables" testclass="Arguments"/>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="File Upload using REST API">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp elementType="LoopController" guiclass="LoopControlPanel" name="ThreadGroup.main_controller" testclass="LoopController">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">-1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <stringProp name="ThreadGroup.start_time"></stringProp>
+        <stringProp name="ThreadGroup.end_time"></stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+      </ThreadGroup>
+      <hashTree type="tg">
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="Defaults">
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+          <elementProp elementType="Arguments" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" testclass="Arguments" testname="user_defined"/>
+        </ConfigTestElement>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="uploading ">
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.path">/zoomdata/api/upload/${sourceId}?accountId=${accountId}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+          <elementProp elementType="HTTPFileArgs" name="HTTPsampler.Files">
+            <collectionProp name="HTTPFileArgs.files">
+              <elementProp elementType="HTTPFileArg" name="/Users/jemal/jemal-performance-project/performance-taurus/MiscTest.csv">
+                <stringProp name="File.path">/Users/jemal/jemal-performance-project/performance-taurus/MiscTest.csv</stringProp>
+                <stringProp name="File.paramname">fileData</stringProp>
+                <stringProp name="File.mimetype">text/csv</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Headers">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp elementType="Header" name="">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Basic ${__base64Encode(${__P(user-auth)})}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert has [&quot;&quot;succeeded&quot;&quot;, &quot;&quot;failed&quot;:0&quot;]">
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <stringProp name="Assertion.test_type">16</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="">"succeeded"</stringProp>
+              <stringProp name="">"failed":0</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree"/>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

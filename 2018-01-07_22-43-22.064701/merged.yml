@@ -1,0 +1,41 @@
+---
+execution:
+- concurrency: 10
+  hold-for: 1m
+  ramp-up: 50s
+  scenario: File Upload using REST API
+included-configs:
+- config.yml
+modules:
+  jmeter:
+    memory-xmx: 4G
+scenarios:
+  File Upload using REST API:
+    requests:
+    - assert:
+      - assume-success: false
+        contains:
+        - '"succeeded"'
+        - '"failed":0'
+        not: false
+        regexp: false
+        subject: body
+      follow-redirects: true
+      headers:
+        Authorization: Basic ${__base64Encode(${__P(user-auth)})}
+      label: 'uploading '
+      method: POST
+      upload-files:
+      - mime-type: text/csv
+        param: fileData
+        path: MiscTest.csv
+      url: http://${host}:${port}/zoomdata/api/upload/${sourceId}?accountId=${accountId}
+    store-cache: false
+    store-cookie: false
+    use-dns-cache-mgr: false
+    variables:
+      accountId: 5a2ef7a2e4b043bb0659cddf
+      host: localhost
+      port: '8080'
+      sourceId: 5a4588ffe4b043bb5a947999
+
